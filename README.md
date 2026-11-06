@@ -42,5 +42,5 @@ Since the p-value (0.042) is below the standard 0.05 significance threshold, we 
 ```text
 ├── nigeria_fdi_gdp_1990_2024.csv    # Cleaned and combined World Bank dataset
 ├── analysis.py                     # Python script for OLS regression & plots
-├── nigeria_fdi_gdp_regression_plot.png # Visualizations (Scatter fit & Time series)
+├── nigeria_fdi_gdp_regression_plot.png # Visualizations (Scatter fit)
 └── README.md                       # Project documentation
