@@ -1,28 +1,46 @@
-# Foreign Direct Investment and Economic Growth in Nigeria (1990–2024)
+# Nigeria: Foreign Direct Investment (FDI) and Economic Growth Analysis (1990–2024)
 
-## Project Overview
-This project investigates the relationship between Foreign Direct Investment (FDI) and Economic Growth in Nigeria using World Bank data from 1990 to 2024. A simple Ordinary Least Squares (OLS) linear regression model was built in Python to evaluate the impact of FDI on annual GDP growth.
-
----
-
-## Key Findings & Results
-- **Sample Size (N):** 35 annual observations (1990–2024)
-- **Regression Equation:** GDP Growth = 1.9641 + 1.6820 * (FDI Net Inflows)
-- **Slope:** 1.6820 (p = 0.042) — A 1% increase in FDI net inflows is associated with a 1.68% increase in annual GDP growth.
-- **Statistical Significance:** Because the p-value (0.042) is less than 0.05, we reject the null hypothesis and conclude there is a statistically significant positive relationship.
-- **Model Fit:** R-squared = 0.120 — FDI explains about 12% of the variation in Nigeria's GDP growth over this period.
+An econometric analysis exploring the relationship between **Foreign Direct Investment (FDI) net inflows (% of GDP)** and **Annual GDP Growth (%)** in Nigeria from 1990 to 2024 using Ordinary Least Squares (OLS) regression.
 
 ---
 
-## Repository Contents
-- `nigeria_fdi_gdp_1990_2024.csv`: The cleaned dataset used for analysis.
-- `nigeria_fdi_regression_analysis.py`: The Python script used to process data and run the OLS regression.
-- `nigeria_fdi_gdp_regression.png`: Scatter plot visualization of the regression trendline.
+##  Research Overview
+
+* **Research Question:** Does Foreign Direct Investment have a statistically significant relationship with economic growth in Nigeria?
+* **Data Sources:** World Development Indicators (WDI), The World Bank
+  * **Dependent Variable (Y):** GDP growth (annual %) [Indicator: `NY.GDP.MKTP.KD.ZG`]
+  * **Independent Variable (X):** FDI net inflows (% of GDP) [Indicator: `BX.KLT.DINV.WD.GD.ZS`]
+* **Sample Period:** 1990–2024 (N = 35 observations)
 
 ---
 
-## How to Run the Code
-1. Clone or download this repository.
-2. Install the required Python packages:
-   ```bash
-   pip install pandas statsmodels matplotlib seaborn
+##  Hypotheses
+
+* **Null Hypothesis (H₀):** FDI has no statistically significant relationship with economic growth in Nigeria.
+* **Alternative Hypothesis (H₁):** FDI has a statistically significant relationship with economic growth in Nigeria.
+
+---
+
+##  Regression Model & Results
+
+**Model Equation:**
+> **GDP_Growth**<sub>t</sub> = β₀ + β₁ **FDI_Net_Inflows**<sub>t</sub> + ε<sub>t</sub>
+
+### Key Statistical Findings:
+* **Fitted Equation:** GDP_Growth = 1.9641 + 1.6820 × FDI_Net_Inflows
+* **R²:** `0.1200` (Adjusted R²: `0.0930`)
+* **F-statistic:** `4.487` (p-value = `0.0418`)
+* **FDI Coefficient p-value:** `0.042` (< 0.05)
+
+### Conclusion:
+Since the p-value (0.042) is below the standard 0.05 significance threshold, we **reject the null hypothesis (H₀)**. The analysis indicates a statistically significant positive relationship between FDI net inflows and annual GDP growth in Nigeria over the 1990–2024 period.
+
+---
+
+##  Repository Structure
+
+```text
+├── nigeria_fdi_gdp_1990_2024.csv    # Cleaned and combined World Bank dataset
+├── analysis.py                     # Python script for OLS regression & plots
+├── nigeria_fdi_gdp_regression_plot.png # Visualizations (Scatter fit & Time series)
+└── README.md                       # Project documentation
